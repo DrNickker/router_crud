@@ -1,8 +1,5 @@
-// modules
 import "./PostList.css";
-import { PropTypes } from 'prop-types';
-
-// components
+import PropTypes from 'prop-types';
 import ButtonSave from "../ui-elems/ButtonSave";
 import PostCard from "../PostCard/PostCard";
 

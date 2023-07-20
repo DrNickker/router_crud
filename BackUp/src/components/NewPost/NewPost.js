@@ -1,5 +1,4 @@
 import "./NewPost.css";
-//import useRequest from "../../hooks/useRequest";
 import axios from "axios";
 import { nanoid } from "nanoid";
 
@@ -10,10 +9,9 @@ function NewPost() {
     console.log("e.target:", event.target[0]);
     let formValue = input.value.trim();
 
-    // todo remove log button handler
     console.log("New post add button clicked, value: ", formValue);
 
-    // validate text length
+
     if (formValue.length > 0) {
       const newPostId = nanoid();
       makePostRequest(process.env.REACT_APP_POSTS_URL + `posts/${newPostId}`, {
@@ -22,7 +20,6 @@ function NewPost() {
         timestamp: new Date(),
       });
 
-      // clear textarea
       input.value = "";
     }
   };

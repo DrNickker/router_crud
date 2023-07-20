@@ -1,6 +1,6 @@
 import "./NewPost.css";
 import axios from "axios";
-import nanoid from "nanoid";
+import { nanoid } from "nanoid";
 
 function NewPost() {
   const addNewPostSubmitHandler = (event) => {

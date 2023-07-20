@@ -39,7 +39,7 @@ function PostList({ posts, loading }) {
         (posts === null)
           ?
           <p className="post-list" style={{ color: 'gray', }}>
-            Сорян, постов нет...
+            Посты отсутствуют...
           </p>
           :
           loading ? <p>Загружаем данные...</p> : <PostListElement posts={posts} />

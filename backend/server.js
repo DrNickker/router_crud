@@ -20,6 +20,7 @@ router.get("/posts", async (ctx, next) => {
 
 router.post("/posts", async (ctx, next) => {
   const { id, content } = ctx.request.body;
+  console.log(id, content);
 
   if (id !== 0) {
     posts = posts.map((o) => (o.id !== id ? o : { ...o, content: content }));
@@ -42,7 +43,7 @@ router.delete("/posts/:id", async (ctx, next) => {
 
 app.use(router.routes()).use(router.allowedMethods());
 
-const port = process.env.PORT || 7070;
+const port = process.env.PORT || 7777;
 const server = http.createServer(app.callback());
 server.listen(port, () => {
   console.log(`server started http://localhost:${port}`);

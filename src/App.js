@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <p className="notice">
        {" "}
-        <strong>запусти в терминале "cd /backend/ "</strong>
+        <strong>запусти в терминале "cd/backend/ "</strong>
       </p>
       <hr />
       <Router>
